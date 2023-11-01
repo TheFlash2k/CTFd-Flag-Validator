@@ -6,11 +6,11 @@ services:
     environment:
       - CTFD_ADMIN_TOKEN=
       - CTFD_INSTANCE=
-      - DISCORD_WEBHOOK_URL=""
-      - API_HOST="0.0.0.0"
+      - DISCORD_WEBHOOK_URL=
+      - API_HOST=0.0.0.0
       - API_PORT=9512
       - VERIFICATION_DELAY=1
-      - DB_NAME="flags.db"
+      - DB_NAME=flags.db
     ports:
       - "172.17.0.1:9512:9512"
     volumes:
