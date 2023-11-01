@@ -47,7 +47,7 @@ In order to integrate this with your CTFd `docker-compose`, just copy the follow
   flagvalidator:
     build: . # Change this to the folder you have the source code + Dockerfile in.
     ports:
-      - "172.17.0.1:${API_PORT}:${API_PORT}"
+      - "172.17.0.1:9512:9512"
     environment:
       - CTFD_ADMIN_TOKEN=
       - CTFD_INSTANCE=
