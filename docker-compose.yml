@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  flagvalidator:
+    build: .
+    ports:
+      - "172.17.0.1:${API_PORT}:${API_PORT}"
+    environment:
+      - CTFD_ADMIN_TOKEN=
+      - CTFD_INSTANCE=
+      - DISCORD_WEBHOOK_URL=""
+      - API_HOST="0.0.0.0"
+      - API_PORT=9512
+      - VERIFICATION_DELAY=1
+      - DB_NAME="flags.db"
+    volumes:
+      - .:/app/
+    restart: always
