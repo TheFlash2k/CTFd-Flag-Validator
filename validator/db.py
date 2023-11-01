@@ -4,7 +4,7 @@ class Database:
 
     def __init__(self, db_name : str = "flags.db"):
         self.db_name = db_name
-        self.conn = sqlite3.connect(self.db_name)
+        self.conn = sqlite3.connect(self.db_name, check_same_thread=False)
         self.cursor = self.conn.cursor()
         self.cursor.execute("CREATE TABLE IF NOT EXISTS flags (id INTEGER PRIMARY KEY, flag TEXT, team_id TEXT, chal_id TEXT)")
         self.conn.commit()
